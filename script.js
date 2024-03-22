@@ -18,18 +18,12 @@
 //   }
 // }
 function arrayMethod(str1) {
-  const myArray = str1.toString().split("");
-  const lastNumber = parseInt(myArray[myArray.length - 1]);
-  if (myArray.length === 1 && lastNumber === 0)
-    return "it's not a multiple of five";
-  if (lastNumber === 0 || lastNumber === 5) {
-    return str1;
-  } else return "not a multiple of five";
+  return str1.toUpperCase();
 }
 
-console.log(arrayMethod(5));
-console.log(arrayMethod(7565));
-console.log(arrayMethod(0));
+console.log(arrayMethod("Alexander"));
+console.log(arrayMethod("dede"));
+console.log(arrayMethod("kaliSa"));
 
 // console.log(arrayMethod(4, 2));
 
