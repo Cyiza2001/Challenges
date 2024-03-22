@@ -1,12 +1,15 @@
+// function arrayMethod(str1) {
+//   let factorial = str1;
+//   for (let i = str1 - 1; i >= 1; i--) {
+//     factorial *= i;
+//   }
+//   return factorial;
+// }
 function arrayMethod(str1) {
-  let factorial = str1;
-  for (let i = str1 - 1; i >= 1; i--) {
-    factorial *= i;
-  }
-  return factorial;
+  return str1.split("").reverse().join("");
 }
 
-console.log(arrayMethod(26));
+console.log(arrayMethod("manyembua"));
 
 // console.log(arrayMethod(4, 2));
 
