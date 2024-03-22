@@ -17,13 +17,15 @@
 //     return "it's not a palindrome";
 //   }
 // }
-function arrayMethod(str1) {
-  return str1.toUpperCase();
+function arrayMethod(str, position, repl) {
+  const arr = str.split("");
+  arr[position] = repl;
+  return arr.join("");
 }
 
-console.log(arrayMethod("Alexander"));
-console.log(arrayMethod("dede"));
-console.log(arrayMethod("kaliSa"));
+console.log(arrayMethod("Alexander", 5, "X"));
+console.log(arrayMethod("dede", 1, "z"));
+console.log(arrayMethod("kaliSa", 4, "g"));
 
 // console.log(arrayMethod(4, 2));
 
