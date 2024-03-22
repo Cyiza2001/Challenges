@@ -5,11 +5,22 @@
 //   }
 //   return factorial;
 // }
+// function arrayMethod(str1) {
+//   return str1.split("").reverse().join("");
+// }
 function arrayMethod(str1) {
-  return str1.split("").reverse().join("");
+  const reversed = str1.replace(/\s/g, "").split("").reverse().join("");
+  const original = str1.replace(/\s/g, "");
+  if (original === reversed) {
+    return "it is a palindrome";
+  } else {
+    return "it's not a palindrome";
+  }
 }
 
-console.log(arrayMethod("manyembua"));
+console.log(arrayMethod("dede"));
+console.log(arrayMethod("race car"));
+console.log(arrayMethod("ana"));
 
 // console.log(arrayMethod(4, 2));
 
