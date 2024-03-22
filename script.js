@@ -19,11 +19,14 @@
 // }
 function arrayMethod(str) {
   const vowels = "iuoae";
+  let i = 0;
   const filteredString = str
     .toLowerCase()
     .split("")
-    .filter((letter) => vowels.indexOf(letter) === -1);
-  return filteredString.join("");
+    .filter((letter) => {
+      if (vowels.indexOf(letter) !== -1) return i++;
+    });
+  return i;
 }
 
 console.log(arrayMethod("Alexander"));
