@@ -18,15 +18,7 @@
 //   }
 // }
 function arrayMethod(str) {
-  const vowels = "iuoae";
-  let i = 0;
-  const filteredString = str
-    .toLowerCase()
-    .split("")
-    .filter((letter) => {
-      if (vowels.indexOf(letter) === -1) return i++;
-    });
-  return i;
+  return str.indexOf("e");
 }
 
 console.log(arrayMethod("Alexander"));
