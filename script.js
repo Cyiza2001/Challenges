@@ -26,10 +26,14 @@
 function arrayMethod(str) {
   return str.map((el) => el ** 2);
 }
+function arrayMethod(n) {
+  const array = [1, 2, 3, 4, 5];
+  return array.slice(0, n);
+}
 
-console.log(arrayMethod([1, 2, 3, 4, 5]));
-console.log(arrayMethod([6, 7, 8, 9, 10]));
-console.log(arrayMethod([12]));
+console.log(arrayMethod(4));
+console.log(arrayMethod(3));
+console.log(arrayMethod(2));
 
 // console.log(arrayMethod(4, 2));
 
