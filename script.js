@@ -23,22 +23,18 @@
 // function arrayMethod(str) {
 //   return [...new Set(str)];
 // }
-function arrayMethod(str) {
-  return str.map((el) => el ** 2);
+// function arrayMethod(str) {
+//   return str.map((el) => el ** 2);
+// }
+// function arrayMethod(n) {
+//   const array = [1, 2, 3, 4, 5];
+//   return array.slice(0, n);
+// }
+function arrayMethod() {
+  const array = [1, 2, 3, 4, 5, 8];
+  return array[array.length - 1];
 }
-function arrayMethod(n) {
-  const array = [1, 2, 3, 4, 5];
-  return array.slice(0, n);
-}
 
-console.log(arrayMethod(4));
-console.log(arrayMethod(3));
-console.log(arrayMethod(2));
-
-// console.log(arrayMethod(4, 2));
-
-// console.log(arrayMethod(5, 5));
-
-// console.log(arrayMethod(6, 9));
-
-// console.log(arrayMethod(7, 10));
+console.log(arrayMethod());
+// console.log(arrayMethod(3));
+// console.log(arrayMethod(2));
