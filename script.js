@@ -17,8 +17,11 @@
 //     return "it's not a palindrome";
 //   }
 // }
+// function arrayMethod(str) {
+//   return str.indexOf("e");
+// }
 function arrayMethod(str) {
-  return str.indexOf("e");
+  return [...new Set(str)];
 }
 
 console.log(arrayMethod("Alexander"));
