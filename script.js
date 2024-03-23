@@ -24,7 +24,7 @@ function arrayMethod(str) {
     .toLowerCase()
     .split("")
     .filter((letter) => {
-      if (vowels.indexOf(letter) !== -1) return i++;
+      if (vowels.indexOf(letter) === -1) return i++;
     });
   return i;
 }
