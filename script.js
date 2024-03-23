@@ -20,13 +20,16 @@
 // function arrayMethod(str) {
 //   return str.indexOf("e");
 // }
+// function arrayMethod(str) {
+//   return [...new Set(str)];
+// }
 function arrayMethod(str) {
-  return [...new Set(str)];
+  return str.map((el) => el ** 2);
 }
 
-console.log(arrayMethod("Alexander"));
-console.log(arrayMethod("dede"));
-console.log(arrayMethod("kaliSa"));
+console.log(arrayMethod([1, 2, 3, 4, 5]));
+console.log(arrayMethod([6, 7, 8, 9, 10]));
+console.log(arrayMethod([12]));
 
 // console.log(arrayMethod(4, 2));
 
