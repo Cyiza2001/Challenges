@@ -30,15 +30,10 @@
 //   const array = [1, 2, 3, 4, 5];
 //   return array.slice(0, n);
 // }
-function arrayMethod(n) {
-  const array = [1, 2, 3, 4, 5, 8];
-  let isPresent = false;
-  array.forEach((el) => {
-    if (el === n) isPresent = true;
-  });
-  return isPresent;
+function arrayMethod(arr) {
+  return arr.sort((a, b) => a - b);
 }
 
-console.log(arrayMethod(5));
+console.log(arrayMethod([1, 5, 2, 4, 3]));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
