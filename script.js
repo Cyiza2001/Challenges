@@ -48,11 +48,18 @@
 // function arrayMethod(arr) {
 //   return arr.map((element) => element.toUpperCase());
 // }
-function arrayMethod(min, max) {
-  const randomN = Math.random() * (max - min + 1) + min;
-  return Math.floor(randomN);
+// function arrayMethod(min, max) {
+//   const randomN = Math.random() * (max - min + 1) + min;
+//   return Math.floor(randomN);
+// }
+function arrayMethod(n) {
+  let fibonacci = [0, 1];
+  for (let i = 2; i <= n - 1; i++) {
+    fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+  }
+  return fibonacci;
 }
 
-console.log(arrayMethod(4, 5));
+console.log(arrayMethod(3));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
