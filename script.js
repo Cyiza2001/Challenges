@@ -59,13 +59,12 @@
 //   }
 //   return fibonacci;
 // }
-function arrayMethod(n) {
-  const capitalised = n.split(/\s+/).map((element) => {
-    return element[0].toUpperCase() + element.slice(1);
-  });
-  return capitalised.join(" ");
+function arrayMethod(year) {
+  const feb = new Date(year, 1, 29);
+  if (feb.getDate() === 29) return "Leap Year";
+  else return "ordinary Year";
 }
 
-console.log(arrayMethod("alexandre ndanyuzwe cyiza"));
+console.log(arrayMethod(2024));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
