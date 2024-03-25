@@ -59,12 +59,10 @@
 //   }
 //   return fibonacci;
 // }
-function arrayMethod(year) {
-  const feb = new Date(year, 1, 29);
-  if (feb.getDate() === 29) return "Leap Year";
-  else return "ordinary Year";
+function arrayMethod(arr1, arr2) {
+  return arr1.filter((el) => arr2.includes(el));
 }
 
-console.log(arrayMethod(2024));
+console.log(arrayMethod([1, 2, 3, 4, 5, 10], [3, 4, 5, 6, 7, 8]));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
