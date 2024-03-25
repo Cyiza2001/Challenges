@@ -60,13 +60,12 @@
 //   return fibonacci;
 // }
 function arrayMethod(n) {
-  const sorted = n.sort((a, b) => a - b);
-  const middleIndex = Math.floor(n.length / 2);
-  if (n.length % 2 === 0)
-    return (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
-  else return sorted[middleIndex];
+  const capitalised = n.split(/\s+/).map((element) => {
+    return element[0].toUpperCase() + element.slice(1);
+  });
+  return capitalised.join(" ");
 }
 
-console.log(arrayMethod([1, 2, 3, 3, 4, 5, 6, 7]));
+console.log(arrayMethod("alexandre ndanyuzwe cyiza"));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
