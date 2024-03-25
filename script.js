@@ -38,14 +38,17 @@
 //   if (negativeValues) return "all numbers all not positive";
 //   else return "all numbers are positive";
 // }
+// function arrayMethod(arr) {
+//   return arr
+//     .filter((el) => el % 2 === 0)
+//     .reduce((acc, curr, i, arr) => {
+//       return acc + curr;
+//     }, 0);
+// }
 function arrayMethod(arr) {
-  return arr
-    .filter((el) => el % 2 === 0)
-    .reduce((acc, curr, i, arr) => {
-      return acc + curr;
-    }, 0);
+  return arr.map((element) => element.toUpperCase());
 }
 
-console.log(arrayMethod([4, 8, 2, 4, 2]));
+console.log(arrayMethod(["get", "set", "delete"]));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
