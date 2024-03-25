@@ -51,15 +51,22 @@
 // function arrayMethod(min, max) {
 //   const randomN = Math.random() * (max - min + 1) + min;
 //   return Math.floor(randomN);
+// // }
+// function arrayMethod(n) {
+//   let fibonacci = [0, 1];
+//   for (let i = 2; i <= n - 1; i++) {
+//     fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+//   }
+//   return fibonacci;
 // }
 function arrayMethod(n) {
-  let fibonacci = [0, 1];
-  for (let i = 2; i <= n - 1; i++) {
-    fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
-  }
-  return fibonacci;
+  const sorted = n.sort((a, b) => a - b);
+  const middleIndex = Math.floor(n.length / 2);
+  if (n.length % 2 === 0)
+    return (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
+  else return sorted[middleIndex];
 }
 
-console.log(arrayMethod(3));
+console.log(arrayMethod([1, 2, 3, 3, 4, 5, 6, 7]));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
