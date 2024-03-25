@@ -30,10 +30,15 @@
 //   const array = [1, 2, 3, 4, 5];
 //   return array.slice(0, n);
 // }
+// function arrayMethod(arr) {
+//   return arr.sort((a, b) => a - b);
+// }
 function arrayMethod(arr) {
-  return arr.sort((a, b) => a - b);
+  const negativeValues = arr.some((el) => el < 0);
+  if (negativeValues) return "all numbers all not positive";
+  else return "all numbers are positive";
 }
 
-console.log(arrayMethod([1, 5, 2, 4, 3]));
+console.log(arrayMethod([1, 5, -2, 4, 3]));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
