@@ -59,10 +59,28 @@
 //   }
 //   return fibonacci;
 // }
-function arrayMethod(arr1, arr2) {
-  return arr1.filter((el) => arr2.includes(el));
+// function arrayMethod(arr1, arr2) {
+//   return arr1.filter((el) => arr2.includes(el));
+// }
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+  if (number === 2) {
+    return true;
+  }
+  if (number % 2 === 0) {
+    return false;
+  }
+  for (let i = 3; i <= Math.sqrt(number); i += 2) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
-console.log(arrayMethod([1, 2, 3, 4, 5, 10], [3, 4, 5, 6, 7, 8]));
+console.log(isPrime(2));
+
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
