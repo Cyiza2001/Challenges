@@ -45,10 +45,14 @@
 //       return acc + curr;
 //     }, 0);
 // }
-function arrayMethod(arr) {
-  return arr.map((element) => element.toUpperCase());
+// function arrayMethod(arr) {
+//   return arr.map((element) => element.toUpperCase());
+// }
+function arrayMethod(min, max) {
+  const randomN = Math.random() * (max - min + 1) + min;
+  return Math.floor(randomN);
 }
 
-console.log(arrayMethod(["get", "set", "delete"]));
+console.log(arrayMethod(4, 5));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
