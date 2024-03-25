@@ -33,12 +33,19 @@
 // function arrayMethod(arr) {
 //   return arr.sort((a, b) => a - b);
 // }
+// function arrayMethod(arr) {
+//   const negativeValues = arr.some((el) => el < 0);
+//   if (negativeValues) return "all numbers all not positive";
+//   else return "all numbers are positive";
+// }
 function arrayMethod(arr) {
-  const negativeValues = arr.some((el) => el < 0);
-  if (negativeValues) return "all numbers all not positive";
-  else return "all numbers are positive";
+  return arr
+    .filter((el) => el % 2 === 0)
+    .reduce((acc, curr, i, arr) => {
+      return acc + curr;
+    }, 0);
 }
 
-console.log(arrayMethod([1, 5, -2, 4, 3]));
+console.log(arrayMethod([4, 8, 2, 4, 2]));
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
