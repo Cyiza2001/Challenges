@@ -79,16 +79,23 @@
 //   }
 //   return true;
 // }
-function arrayMethod(str) {
-  const notDigitsOnly = str
-    .split("")
-    .map((el) => parseInt(el))
-    .includes(NaN);
+// function arrayMethod(str) {
+//   const notDigitsOnly = str
+//     .split("")
+//     .map((el) => parseInt(el))
+//     .includes(NaN);
 
-  return notDigitsOnly ? true : false;
+//   return notDigitsOnly ? true : false;
+// }
+function arrayMethod(str) {
+  let words = 0;
+  str.split(/\s+/).forEach((element) => {
+    return words++;
+  });
+  return words;
 }
 
-console.log(arrayMethod("123"));
+console.log(arrayMethod("XANDER CYIZA NDANYUZWE"));
 
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
