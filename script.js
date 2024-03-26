@@ -127,13 +127,20 @@
 //     } else return num1 / num2;
 //   } else return "invalid operator ";
 // }
-function countChar(str, char) {
-  let i = 0;
-  str.split("").forEach((element) => {
-    if (element === char) i++;
+// function countChar(str, char) {
+//   let i = 0;
+//   str.split("").forEach((element) => {
+//     if (element === char) i++;
+//   });
+//   return i;
+// }
+function findMaxNumber(arr) {
+  let max = arr[0];
+  arr.forEach((el) => {
+    if (el > max) max = el;
   });
-  return i;
+  return max;
 }
-console.log(countChar("alexander", "a"));
+console.log(findMaxNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 // innerFunc(); // Output: "I am from the outer function"
