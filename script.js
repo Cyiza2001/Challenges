@@ -95,11 +95,26 @@
 //   });
 //   return max;
 // }
-function arrayMethod(arr) {
-  return arr.filter((el) => el % 2 === 0);
-}
+// const tag = document.querySelector(".bosiko");
+// console.log(tag);
 
-console.log(arrayMethod([10, 3, 4, 23, 5, 6, 7]));
+// function arrayMethod(arr) {}
+
+// console.log(arrayMethod([10, 3, 4, 23, 5, 6, 7]));
 
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
+
+function outerFunction() {
+  let outerVariable = "I am from the outer function";
+
+  function innerFunction() {
+    console.log(outerVariable); // Accessing outerVariable from the outer function's scope
+  }
+
+  return innerFunction();
+}
+
+outerFunction();
+
+// innerFunc(); // Output: "I am from the outer function"
