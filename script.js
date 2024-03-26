@@ -134,13 +134,19 @@
 //   });
 //   return i;
 // }
-function findMaxNumber(arr) {
-  let max = arr[0];
-  arr.forEach((el) => {
-    if (el > max) max = el;
-  });
-  return max;
+// function findMaxNumber(arr) {
+//   let max = arr[0];
+//   arr.forEach((el) => {
+//     if (el > max) max = el;
+//   });
+//   return max;
+// }
+function titleCase(str) {
+  return str
+    .split(" ")
+    .map((el) => el[0].toUpperCase() + el.slice(1))
+    .join(" ");
 }
-console.log(findMaxNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(titleCase("alexandre ndanyuzwe cyiza"));
 
 // innerFunc(); // Output: "I am from the outer function"
