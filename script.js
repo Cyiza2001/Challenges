@@ -87,13 +87,16 @@
 
 //   return notDigitsOnly ? true : false;
 // }
+// function arrayMethod(arr) {
+//   let max = arr[0];
+//   arr.forEach((element) => {
+//     if (element > max) return (max = element);
+//     else return max;
+//   });
+//   return max;
+// }
 function arrayMethod(arr) {
-  let max = arr[0];
-  arr.forEach((element) => {
-    if (element > max) return (max = element);
-    else return max;
-  });
-  return max;
+  return arr.filter((el) => el % 2 === 0);
 }
 
 console.log(arrayMethod([10, 3, 4, 23, 5, 6, 7]));
