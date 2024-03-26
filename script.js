@@ -117,16 +117,23 @@
 
 // outerFunction();
 
-function calculator(num1, num2, operator) {
-  if (operator === "+") return num1 + num2;
-  else if (operator === "-") return num1 - num2;
-  else if (operator === "*") return num1 * num2;
-  else if (operator === "/") {
-    if (num2 === 0) {
-      return "not possible to divide by zero";
-    } else return num1 / num2;
-  } else return "invalid operator ";
+// function calculator(num1, num2, operator) {
+//   if (operator === "+") return num1 + num2;
+//   else if (operator === "-") return num1 - num2;
+//   else if (operator === "*") return num1 * num2;
+//   else if (operator === "/") {
+//     if (num2 === 0) {
+//       return "not possible to divide by zero";
+//     } else return num1 / num2;
+//   } else return "invalid operator ";
+// }
+function countChar(str, char) {
+  let i = 0;
+  str.split("").forEach((element) => {
+    if (element === char) i++;
+  });
+  return i;
 }
-console.log(calculator(1, 2, ""));
+console.log(countChar("alexander", "a"));
 
 // innerFunc(); // Output: "I am from the outer function"
