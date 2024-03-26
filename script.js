@@ -87,15 +87,16 @@
 
 //   return notDigitsOnly ? true : false;
 // }
-function arrayMethod(str) {
-  let words = 0;
-  str.split(/\s+/).forEach((element) => {
-    return words++;
+function arrayMethod(arr) {
+  let max = arr[0];
+  arr.forEach((element) => {
+    if (element > max) return (max = element);
+    else return max;
   });
-  return words;
+  return max;
 }
 
-console.log(arrayMethod("XANDER CYIZA NDANYUZWE"));
+console.log(arrayMethod([10, 3, 4, 23, 5, 6, 7]));
 
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
