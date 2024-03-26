@@ -141,12 +141,20 @@
 //   });
 //   return max;
 // }
+// function titleCase(str) {
+//   return str
+//     .split(" ")
+//     .map((el) => el[0].toUpperCase() + el.slice(1))
+//     .join(" ");
+// }
 function titleCase(str) {
-  return str
-    .split(" ")
-    .map((el) => el[0].toUpperCase() + el.slice(1))
-    .join(" ");
+  let reversedStringArr = [];
+  const strArray = str.split("");
+  for (let i = strArray.length - 1; i >= 0; i--)
+    reversedStringArr.push(strArray[i]);
+  return reversedStringArr.join("");
 }
+
 console.log(titleCase("alexandre ndanyuzwe cyiza"));
 
 // innerFunc(); // Output: "I am from the outer function"
