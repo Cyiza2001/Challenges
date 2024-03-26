@@ -154,17 +154,21 @@
 //     reversedStringArr.push(strArray[i]);
 //   return reversedStringArr.join("");
 // }
-function isPalindrome(str) {
-  const compressedStr = str.replace(/\s/g, "");
-  const reversedStr = str.replace(/\s/g, "").split("").reverse().join("");
-  console.log(reversedStr);
-  if (compressedStr === reversedStr) return true;
-  else return false;
+// function isPalindrome(str) {
+//   const compressedStr = str.replace(/\s/g, "");
+//   const reversedStr = str.replace(/\s/g, "").split("").reverse().join("");
+//   console.log(reversedStr);
+//   if (compressedStr === reversedStr) return true;
+//   else return false;
+// }
+// console.log(isPalindrome("alexandre ndanyuzwe cyiza"));
+// console.log(isPalindrome("madam"));
+// console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("hello"));
+function vowelsCounter(str) {
+  const vowels = "iuoae";
+  return str.split("").filter((letter) => vowels.indexOf(letter) !== -1).length;
 }
-console.log(isPalindrome("alexandre ndanyuzwe cyiza"));
-console.log(isPalindrome("madam"));
-console.log(isPalindrome("racecar"));
-console.log(isPalindrome("hello"));
-console.log(isPalindrome(""));
+console.log(vowelsCounter("alexandre"));
 
 // innerFunc(); // Output: "I am from the outer function"
