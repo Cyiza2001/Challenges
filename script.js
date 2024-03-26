@@ -165,10 +165,21 @@
 // console.log(isPalindrome("madam"));
 // console.log(isPalindrome("racecar"));
 // console.log(isPalindrome("hello"));
-function vowelsCounter(str) {
-  const vowels = "iuoae";
-  return str.split("").filter((letter) => vowels.indexOf(letter) !== -1).length;
+// function vowelsCounter(str) {
+//   const vowels = "iuoae";
+//   return str.split("").filter((letter) => vowels.indexOf(letter) !== -1).length;
+// }
+function validAnagram(str1, str2) {
+  const arr1 = [...str1];
+  const arr2 = [...str2];
+  const setArr = [...new Set(arr1.concat(arr2))];
+
+  for (i = 0; i < setArr.length; i++) {
+    if (setArr[i] === arr1[i] || setArr[i] === arr2[i]) return true;
+    else return false;
+  }
 }
-console.log(vowelsCounter("alexandre"));
+
+console.log(validAnagram("listen", "silent"));
 
 // innerFunc(); // Output: "I am from the outer function"
