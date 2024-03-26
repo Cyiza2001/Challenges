@@ -147,14 +147,24 @@
 //     .map((el) => el[0].toUpperCase() + el.slice(1))
 //     .join(" ");
 // }
-function titleCase(str) {
-  let reversedStringArr = [];
-  const strArray = str.split("");
-  for (let i = strArray.length - 1; i >= 0; i--)
-    reversedStringArr.push(strArray[i]);
-  return reversedStringArr.join("");
+// function titleCase(str) {
+//   let reversedStringArr = [];
+//   const strArray = str.split("");
+//   for (let i = strArray.length - 1; i >= 0; i--)
+//     reversedStringArr.push(strArray[i]);
+//   return reversedStringArr.join("");
+// }
+function isPalindrome(str) {
+  const compressedStr = str.replace(/\s/g, "");
+  const reversedStr = str.replace(/\s/g, "").split("").reverse().join("");
+  console.log(reversedStr);
+  if (compressedStr === reversedStr) return true;
+  else return false;
 }
-
-console.log(titleCase("alexandre ndanyuzwe cyiza"));
+console.log(isPalindrome("alexandre ndanyuzwe cyiza"));
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("racecar"));
+console.log(isPalindrome("hello"));
+console.log(isPalindrome(""));
 
 // innerFunc(); // Output: "I am from the outer function"
