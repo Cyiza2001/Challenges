@@ -105,16 +105,28 @@
 // console.log(arrayMethod(3));
 // console.log(arrayMethod(2));
 
-function outerFunction() {
-  let outerVariable = "I am from the outer function";
+// function outerFunction() {
+//   let outerVariable = "I am from the outer function";
 
-  function innerFunction() {
-    console.log(outerVariable); // Accessing outerVariable from the outer function's scope
-  }
+//   function innerFunction() {
+//     console.log(outerVariable); // Accessing outerVariable from the outer function's scope
+//   }
 
-  return innerFunction();
+//   return innerFunction();
+// }
+
+// outerFunction();
+
+function calculator(num1, num2, operator) {
+  if (operator === "+") return num1 + num2;
+  else if (operator === "-") return num1 - num2;
+  else if (operator === "*") return num1 * num2;
+  else if (operator === "/") {
+    if (num2 === 0) {
+      return "not possible to divide by zero";
+    } else return num1 / num2;
+  } else return "invalid operator ";
 }
-
-outerFunction();
+console.log(calculator(1, 2, ""));
 
 // innerFunc(); // Output: "I am from the outer function"
