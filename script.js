@@ -197,16 +197,16 @@
 
 // innerFunc(); // Output: "I am from the outer function"
 
-function evenOddString(str) {
-  let evenStr = "";
-  let oddStr = "";
-  for (let i = 0; i < str.length; i++) {
-    if (i % 2 === 0) {
-      evenStr += str[i];
-    } else {
-      oddStr += str[i];
-    }
-  }
-  return evenStr + " " + oddStr;
+function replace(s) {
+  //coding and coding....
+
+  const vowels = "iuoaeIUOAE";
+  let convertedArr = [];
+
+  s.split("").forEach((el) => {
+    if (vowels.indexOf(el) !== -1) return convertedArr.push("!");
+    else return convertedArr.push(el);
+  });
+  return convertedArr.join("");
 }
-console.log(evenOddString("codewars"));
+console.log(replace("xander"));
