@@ -169,17 +169,44 @@
 //   const vowels = "iuoae";
 //   return str.split("").filter((letter) => vowels.indexOf(letter) !== -1).length;
 // }
-function validAnagram(str1, str2) {
-  const arr1 = [...str1];
-  const arr2 = [...str2];
-  const setArr = [...new Set(arr1.concat(arr2))];
+//
+// const arr1 = [...str1];
+// const arr2 = [...str2];
+// const setArr = [...new Set(arr1.concat(arr2))];
+// console.log(setArr);
+// if (arr1.length !== arr2.length) {
+//   return false;
+// } else {
+//   for (i = 0; i < setArr.length; i++) {
+//     if (setArr[i] === arr1[i] || setArr[i] === arr2[i]) return true;
+//     else return false;
+//   }
+// }
 
-  for (i = 0; i < setArr.length; i++) {
-    if (setArr[i] === arr1[i] || setArr[i] === arr2[i]) return true;
-    else return false;
-  }
-}
+//   const arr1 = [...str1];
+//   const arr2 = [...str2];
+//   if (arr1.length !== arr2.length) return false;
+//   const filteredArr1 = arr1.filter((el) => arr2.includes(el));
+//   const filteredArr2 = arr2.filter((el) => arr1.includes(el));
 
-console.log(validAnagram("listen", "silent"));
+//   if (filteredArr1.length === filteredArr2.length) return true;
+//   else return false;
+// }
+
+// console.log(validAnagram("astronomer", "modnstarer"));
 
 // innerFunc(); // Output: "I am from the outer function"
+
+function evenOddString(str) {
+  let evenStr = "";
+  let oddStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (i % 2 === 0) {
+      evenStr += str[i];
+    } else {
+      oddStr += str[i];
+    }
+  }
+  return evenStr + " " + oddStr;
+}
+console.log(evenOddString("codewars"));
