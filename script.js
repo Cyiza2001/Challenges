@@ -197,16 +197,35 @@
 
 // innerFunc(); // Output: "I am from the outer function"
 
-function replace(s) {
-  //coding and coding....
+// function replace(s) {
+//   //coding and coding....
 
-  const vowels = "iuoaeIUOAE";
-  let convertedArr = [];
+//   const vowels = "iuoaeIUOAE";
+//   let convertedArr = [];
 
-  s.split("").forEach((el) => {
-    if (vowels.indexOf(el) !== -1) return convertedArr.push("!");
-    else return convertedArr.push(el);
-  });
-  return convertedArr.join("");
+//   s.split("").forEach((el) => {
+//     if (vowels.indexOf(el) !== -1) return convertedArr.push("!");
+//     else return convertedArr.push(el);
+//   });
+//   return convertedArr.join("");
+// }
+// console.log(replace("xander"));
+
+// function SeriesSum(n) {
+//   // Happy Coding ^_^
+//   let sequence = "";
+//   for (i = 1; i <= n; i += 3) {
+//     // console.log(i);
+//     sequence += (1 / i).toString();
+//   }
+//   return sequence;
+// }
+// console.log(SeriesSum(5));
+function formatString(str) {
+  const arrStr = [...str];
+  for (let i = arrStr.length - 3; i >= 1; i -= 3) {
+    arrStr[i] = "," + arrStr[i];
+  }
+  return arrStr.join("");
 }
-console.log(replace("xander"));
+console.log(formatString("1000000200567677"));
