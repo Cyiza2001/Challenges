@@ -229,19 +229,29 @@
 //   return arrStr.join("");
 // }
 // console.log(formatString("1000000200567677"));
-function solution(inputArray) {
-  const productArray = [];
-  for (let i = 0; i < inputArray.length ; i++) {
+// function solution(inputArray) {
+//   const productArray = [];
+//   for (let i = 0; i < inputArray.length; i++) {
+//     let product = inputArray[i] * inputArray[i + 1];
+//     if (!isNaN(product)) productArray.push(product);
+//   }
+//   let maxProduct = productArray[0];
+//   productArray.forEach((el) => {
+//     console.log(el);
+//     if (el > maxProduct) maxProduct = el;
+//   });
+//   return maxProduct;
+// }
 
-   if(i<input) let product = inputArray[i] * inputArray[i + 1];
-   
+// console.log(solution([1, 0, 1, 0, 1000]));
+
+function solution(inputArray) {
+  let max = inputArray[0];
+  for (let i = 0; i < inputArray.length; i++) {
+    if (inputArray[i].length > max.length) max = inputArray[i];
   }
-  let maxProduct = productArray[0];
-  productArray.forEach((el) => {
-    console.log(el);
-    if (el > maxProduct) maxProduct = el;
-  });
-  return maxProduct;
+
+  return inputArray.filter((el) => el.length >= max.length);
 }
 
-console.log(solution([3, 6, -2, -5, 7, 3]));
+console.log(solution(["s", "aba", "aa", "ad", "vcd", "aba"]));
