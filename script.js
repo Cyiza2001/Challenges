@@ -245,13 +245,18 @@
 
 // console.log(solution([1, 0, 1, 0, 1000]));
 
-function solution(inputArray) {
-  let max = inputArray[0];
-  for (let i = 0; i < inputArray.length; i++) {
-    if (inputArray[i].length > max.length) max = inputArray[i];
-  }
-
-  return inputArray.filter((el) => el.length >= max.length);
+function solution(yourLeft, yourRight, friendsLeft, friendsRight) {
+  const myPower = yourLeft + yourRight;
+  const friendsPower = friendsLeft + friendsRight;
+  if (
+    myPower === friendsPower &&
+    yourLeft >= 0 &&
+    yourLeft <= 20 &&
+    friendsLeft >= 0 &&
+    friendsRight <= 20
+  )
+    return true;
+  else return false;
 }
 
-console.log(solution(["s", "aba", "aa", "ad", "vcd", "aba"]));
+console.log(solution(15, 10, 5, 20));
