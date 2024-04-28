@@ -221,11 +221,27 @@
 //   return sequence;
 // }
 // console.log(SeriesSum(5));
-function formatString(str) {
-  const arrStr = [...str];
-  for (let i = arrStr.length - 3; i >= 1; i -= 3) {
-    arrStr[i] = "," + arrStr[i];
+// function formatString(str) {
+//   const arrStr = [...str];
+//   for (let i = arrStr.length - 3; i >= 1; i -= 3) {
+//     arrStr[i] = "," + arrStr[i];
+//   }
+//   return arrStr.join("");
+// }
+// console.log(formatString("1000000200567677"));
+function solution(inputArray) {
+  const productArray = [];
+  for (let i = 0; i < inputArray.length ; i++) {
+
+   if(i<input) let product = inputArray[i] * inputArray[i + 1];
+   
   }
-  return arrStr.join("");
+  let maxProduct = productArray[0];
+  productArray.forEach((el) => {
+    console.log(el);
+    if (el > maxProduct) maxProduct = el;
+  });
+  return maxProduct;
 }
-console.log(formatString("1000000200567677"));
+
+console.log(solution([3, 6, -2, -5, 7, 3]));
