@@ -244,19 +244,26 @@
 // }
 
 // console.log(solution([1, 0, 1, 0, 1000]));
+function solution(text) {
+  const vowels = "iuoae";
+  const textArr = text.split(" ");
+  const vowelsAtIndex = [];
+  const consonantsAtIndex = [];
+  let difference = 0;
+  const diffInLength = [];
+  for (let i = 0; i < textArr.length; i++) {
+    textArr[i].split("").forEach((element) => {
+      if (vowels.indexOf(element) === -1) consonantsAtIndex.push(element);
+      else vowelsAtIndex.push(element);
 
-function solution(yourLeft, yourRight, friendsLeft, friendsRight) {
-  const myPower = yourLeft + yourRight;
-  const friendsPower = friendsLeft + friendsRight;
-  if (
-    myPower === friendsPower &&
-    yourLeft >= 0 &&
-    yourLeft <= 20 &&
-    friendsLeft >= 0 &&
-    friendsRight <= 20
-  )
-    return true;
-  else return false;
+      vowelsAtIndex.join();
+      consonantsAtIndex.join();
+      // difference = consonantsAtIndex[i].length - vowelsAtIndex[i].length;
+      // diffInLength.push(difference);
+    });
+  }
+  console.log(vowelsAtIndex);
+  console.log(consonantsAtIndex);
 }
 
-console.log(solution(15, 10, 5, 20));
+console.log(solution("alexandre ndanyuzwe cyiza"));
